@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tax Calculator</title>
+    <link rel="stylesheet" href="style7.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Tax Calculator</h1>
+        <form id="taxForm">
+            <div class="input-group">
+                <label for="grossIncome">Gross Annual Income (INR):</label>
+                <input type="number" id="grossIncome" name="grossIncome" class="input-field" min="0">
+                <span class="error-icon" id="grossIncomeError">!</span>
+            </div>
+            <div class="input-group">
+                <label for="extraIncome">Extra Income (INR):</label>
+                <input type="number" id="extraIncome" name="extraIncome" class="input-field" min="0">
+                <span class="error-icon" id="extraIncomeError">!</span>
+            </div>
+            <div class="input-group">
+                <label for="deductions">Deductions (INR):</label>
+                <input type="number" id="deductions" name="deductions" class="input-field" min="0">
+                <span class="error-icon" id="deductionsError">!</span>
+            </div>
+            <div class="input-group">
+                <label for="age">Age:</label>
+                <select id="age" name="age" class="input-field">
+                    <option value="below40">Below 40</option>
+                    <option value="40to60">40 to 60</option>
+                    <option value="above60">Above 60</option>
+                </select>
+            </div>
+            <button type="submit" id="calculateBtn">Calculate Tax</button>
+        </form>
+    </div>
+
+    <div class="modal" id="resultsModal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Tax Calculation Results</h2>
+            <p id="taxResult"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
